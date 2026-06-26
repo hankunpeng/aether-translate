@@ -1,0 +1,1554 @@
+/* Custom CSS Variable Design Tokens */
+/* 1. Theme: Cyber Glassmorphism (Default Theme) */
+:root, .theme-cyber {
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --transition-speed: 0.3s;
+
+  /* Cyber Space Color Palette */
+  --bg-dark: #07070b;
+  --panel-bg: rgba(10, 10, 16, 0.75);
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-focus-border: rgba(0, 242, 254, 0.55);
+  
+  --text-main: #f5f5f7;
+  --text-muted: #868693;
+  --text-link: #00f2fe;
+  
+  /* Neon Accents */
+  --accent-cyan: #00f2fe;
+  --accent-blue: #4facfe;
+  --accent-purple: #7f00ff;
+  --accent-magenta: #ff007f;
+  --accent-green: #00ff87;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(90deg, var(--accent-cyan) 0%, var(--accent-blue) 100%);
+  --gradient-purple: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-magenta) 100%);
+  --gradient-btn: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-cyan) 100%);
+  --gradient-success: linear-gradient(135deg, #00ff87 0%, #60efff 100%);
+  
+  /* Shadows */
+  --shadow-neon-cyan: 0 0 15px rgba(0, 242, 254, 0.35);
+  --shadow-neon-purple: 0 4px 20px rgba(127, 0, 255, 0.3);
+  --shadow-panel: 0 25px 60px rgba(0, 0, 0, 0.5);
+  
+  /* Background glows are displayed in Cyber */
+  --bg-glow-display: block;
+  
+  /* Backdrop blur is enabled in Cyber */
+  --panel-blur: blur(35px);
+
+  /* Modal Dialog background */
+  --modal-bg: rgba(14, 14, 23, 0.85);
+
+  /* Card specific variables */
+  --src-card-border-color: rgba(255, 255, 255, 0.25);
+  --src-card-bg: rgba(255, 255, 255, 0.08);
+  --src-card-hover-border: var(--accent-cyan);
+  --src-card-hover-bg: rgba(255, 255, 255, 0.1);
+  --src-card-hover-shadow: 0 0 18px rgba(0, 242, 254, 0.25);
+  --src-card-focus-bg: rgba(255, 255, 255, 0.12);
+  --src-card-focus-shadow: 0 0 25px rgba(0, 242, 254, 0.45);
+  
+  --tg-card-border-color: rgba(255, 255, 255, 0.08);
+  --tg-card-bg: rgba(255, 255, 255, 0.03);
+
+  /* Dropzone specific variables */
+  --dropzone-bg: var(--glass-bg);
+  --dropzone-border-color: rgba(255, 255, 255, 0.22);
+  --dropzone-hover-border: var(--accent-cyan);
+  --dropzone-hover-shadow: 0 0 20px rgba(0, 242, 254, 0.35);
+  --dropzone-outer-bg: linear-gradient(135deg, rgba(0, 242, 254, 0.12) 0%, rgba(127, 0, 255, 0.12) 100%);
+
+  /* Chat Input specific variables */
+  --chat-input-border-color: rgba(255, 255, 255, 0.22);
+  --chat-input-bg: rgba(0, 0, 0, 0.35);
+  --chat-input-hover-border: var(--accent-cyan);
+  --chat-input-hover-shadow: 0 0 18px rgba(0, 242, 254, 0.35);
+  --chat-input-focus-shadow: 0 0 24px rgba(0, 242, 254, 0.5);
+
+  /* Chat bubble custom variables */
+  --user-msg-bg: var(--gradient-purple);
+
+  --glass-card-hover-border: rgba(0, 242, 254, 0.35);
+  --glass-card-focus-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+  --btn-hover-shadow: 0 0 20px rgba(0, 242, 254, 0.45);
+  --success-shadow: 0 0 15px rgba(0, 255, 135, 0.3);
+  --success-hover-shadow: 0 0 22px rgba(0, 255, 135, 0.45);
+  --action-btn-hover-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
+  --clear-btn-hover-shadow: 0 0 10px rgba(255, 59, 48, 0.15);
+  --focus-shadow-glow: 0 0 10px rgba(0, 242, 254, 0.15);
+  --file-icon-bg: rgba(0, 242, 254, 0.08);
+  --file-icon-border: rgba(0, 242, 254, 0.2);
+  --file-icon-color: var(--accent-cyan);
+  --spinner-border: rgba(0, 242, 254, 0.1);
+  --spinner-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+  --swap-btn-hover-bg: rgba(0, 242, 254, 0.08);
+  --swap-btn-hover-color: var(--accent-cyan);
+  --swap-btn-hover-border: var(--accent-cyan);
+  --upload-ring-hover-bg: rgba(0, 242, 254, 0.08);
+  --upload-ring-hover-border: var(--accent-cyan);
+  --upload-ring-hover-shadow: var(--shadow-neon-cyan);
+  --upload-icon-hover-color: var(--accent-cyan);
+  --file-card-border: rgba(255, 255, 255, 0.18);
+  --file-card-hover-border: rgba(0, 242, 254, 0.35);
+  --file-card-hover-shadow: 0 0 18px rgba(0, 242, 254, 0.2);
+}
+
+/* 3. Theme: Gruvbox Material (Optional Retro Theme) */
+.theme-gruvbox {
+  /* Gruvbox Material Dark Theme Palette */
+  --bg-dark: #1d2021;                  /* Gruvbox Hard Dark Background */
+  --panel-bg: #282828;                 /* Gruvbox Medium Background */
+  --glass-bg: #32302f;                 /* Gruvbox Soft Background */
+  --glass-border: #504945;             /* Gruvbox Dark Gray/Border */
+  --glass-focus-border: #7daea3;       /* Gruvbox Blue */
+  
+  --text-main: #d4be98;                /* Gruvbox Foreground Cream */
+  --text-muted: #a89984;               /* Gruvbox Gray */
+  --text-link: #7daea3;                /* Gruvbox Blue */
+  
+  /* Accents mapped to Gruvbox Material colors */
+  --accent-cyan: #89b482;              /* Gruvbox Aqua */
+  --accent-blue: #7daea3;              /* Gruvbox Blue */
+  --accent-purple: #d3869b;            /* Gruvbox Purple */
+  --accent-magenta: #ea6962;           /* Gruvbox Red */
+  --accent-green: #a9b665;             /* Gruvbox Green */
+  
+  /* Gradients mapped to Gruvbox color steps */
+  --gradient-primary: linear-gradient(90deg, #7daea3 0%, #89b482 100%);
+  --gradient-purple: linear-gradient(135deg, #d3869b 0%, #ea6962 100%);
+  --gradient-btn: linear-gradient(135deg, #e78a4e 0%, #d8a657 100%);  /* Orange to Yellow */
+  --gradient-success: linear-gradient(135deg, #a9b665 0%, #89b482 100%);
+  
+  /* Shadows - Warm retro subtle shadows */
+  --shadow-neon-cyan: none;
+  --shadow-neon-purple: none;
+  --shadow-panel: 0 8px 32px rgba(0, 0, 0, 0.4);
+  
+  /* Background glows are hidden in Gruvbox */
+  --bg-glow-display: none;
+  
+  /* Backdrop blur is disabled in Gruvbox */
+  --panel-blur: none;
+
+  /* Modal Dialog background */
+  --modal-bg: #32302f;
+
+  /* Card specific variables */
+  --src-card-border-color: var(--glass-border);
+  --src-card-bg: var(--glass-bg);
+  --src-card-hover-border: var(--glass-focus-border);
+  --src-card-hover-bg: #3c3836;
+  --src-card-hover-shadow: none;
+  --src-card-focus-bg: #3c3836;
+  --src-card-focus-shadow: none;
+  
+  --tg-card-border-color: var(--glass-border);
+  --tg-card-bg: #282828;
+
+  /* Dropzone specific variables */
+  --dropzone-bg: var(--glass-bg);
+  --dropzone-border-color: var(--glass-border);
+  --dropzone-hover-border: var(--glass-focus-border);
+  --dropzone-hover-shadow: none;
+  --dropzone-outer-bg: var(--glass-border);
+
+  /* Chat Input specific variables */
+  --chat-input-border-color: var(--glass-border);
+  --chat-input-bg: #282828;
+  --chat-input-hover-border: var(--glass-focus-border);
+  --chat-input-hover-shadow: none;
+  --chat-input-focus-shadow: none;
+
+  /* Chat bubble custom variables */
+  --user-msg-bg: #504945;
+  
+  --glass-card-hover-border: var(--glass-focus-border);
+  --glass-card-focus-shadow: none;
+  --btn-hover-shadow: none;
+  --success-shadow: none;
+  --success-hover-shadow: none;
+  --action-btn-hover-shadow: none;
+  --clear-btn-hover-shadow: none;
+  --focus-shadow-glow: none;
+  
+  --file-icon-bg: rgba(125, 174, 163, 0.08);
+  --file-icon-border: rgba(125, 174, 163, 0.2);
+  --file-icon-color: var(--accent-blue);
+  
+  --spinner-border: rgba(125, 174, 163, 0.1);
+  --spinner-shadow: none;
+  
+  --swap-btn-hover-bg: rgba(125, 174, 163, 0.08);
+  --swap-btn-hover-color: var(--glass-focus-border);
+  --swap-btn-hover-border: var(--glass-focus-border);
+  
+  --upload-ring-hover-bg: rgba(125, 174, 163, 0.08);
+  --upload-ring-hover-border: var(--glass-focus-border);
+  --upload-ring-hover-shadow: none;
+  --upload-icon-hover-color: var(--glass-focus-border);
+  
+  --file-card-border: var(--glass-border);
+  --file-card-hover-border: var(--glass-focus-border);
+  --file-card-hover-shadow: none;
+}
+
+/* 4. Theme: Tokyo Night (Optional Neon Theme) */
+.theme-tokyo {
+  /* Tokyo Night Storm/Night System Palette */
+  --bg-dark: #16161e;                  /* Tokyo Night Dark Background */
+  --panel-bg: #1f2335;                 /* Tokyo Night Storm Panel */
+  --glass-bg: #24283b;                 /* Tokyo Night Container */
+  --glass-border: #3b4261;             /* Tokyo Night Border */
+  --glass-focus-border: #7aa2f7;       /* Tokyo Night Blue Accent */
+  
+  --text-main: #a9b1d6;                /* Tokyo Night Light Gray-Blue */
+  --text-muted: #565f89;               /* Tokyo Night Dark Gray */
+  --text-link: #7aa2f7;                /* Tokyo Night Blue */
+  
+  /* Tokyo Night Neon Accents */
+  --accent-cyan: #7dcfff;              /* Tokyo Night Cyan */
+  --accent-blue: #7aa2f7;              /* Tokyo Night Blue */
+  --accent-purple: #bb9af7;            /* Tokyo Night Purple */
+  --accent-magenta: #f7768e;           /* Tokyo Night Pink/Red */
+  --accent-green: #9ece6a;             /* Tokyo Night Green */
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(90deg, #7aa2f7 0%, #7dcfff 100%);
+  --gradient-purple: linear-gradient(135deg, #bb9af7 0%, #f7768e 100%);
+  --gradient-btn: linear-gradient(135deg, #7aa2f7 0%, #bb9af7 100%);
+  --gradient-success: linear-gradient(135deg, #73daca 0%, #9ece6a 100%);
+  
+  /* Shadows - Subtle retro neon glows */
+  --shadow-neon-cyan: 0 0 12px rgba(122, 162, 247, 0.2);
+  --shadow-neon-purple: 0 0 12px rgba(187, 154, 247, 0.15);
+  --shadow-panel: 0 8px 32px rgba(10, 10, 15, 0.5);
+  
+  /* Background glows are hidden in Tokyo Night to maintain contrast */
+  --bg-glow-display: none;
+  
+  /* Backdrop blur is disabled in Tokyo Night */
+  --panel-blur: none;
+
+  /* Modal Dialog background */
+  --modal-bg: #1f2335;
+
+  /* Card specific variables */
+  --src-card-border-color: var(--glass-border);
+  --src-card-bg: var(--glass-bg);
+  --src-card-hover-border: var(--glass-focus-border);
+  --src-card-hover-bg: #24283b;
+  --src-card-hover-shadow: none;
+  --src-card-focus-bg: #24283b;
+  --src-card-focus-shadow: none;
+  
+  --tg-card-border-color: var(--glass-border);
+  --tg-card-bg: #1f2335;
+
+  /* Dropzone specific variables */
+  --dropzone-bg: var(--glass-bg);
+  --dropzone-border-color: var(--glass-border);
+  --dropzone-hover-border: var(--glass-focus-border);
+  --dropzone-hover-shadow: none;
+  --dropzone-outer-bg: var(--glass-border);
+
+  /* Chat Input specific variables */
+  --chat-input-border-color: var(--glass-border);
+  --chat-input-bg: #1f2335;
+  --chat-input-hover-border: var(--glass-focus-border);
+  --chat-input-hover-shadow: none;
+  --chat-input-focus-shadow: none;
+
+  /* Chat bubble custom variables */
+  --user-msg-bg: #2e3c64;              /* Tokyo Night Dark Blue */
+  
+  --glass-card-hover-border: var(--glass-focus-border);
+  --glass-card-focus-shadow: none;
+  --btn-hover-shadow: none;
+  --success-shadow: none;
+  --success-hover-shadow: none;
+  --action-btn-hover-shadow: none;
+  --clear-btn-hover-shadow: none;
+  --focus-shadow-glow: none;
+  
+  --file-icon-bg: rgba(122, 162, 247, 0.08);
+  --file-icon-border: rgba(122, 162, 247, 0.2);
+  --file-icon-color: var(--accent-blue);
+  
+  --spinner-border: rgba(122, 162, 247, 0.1);
+  --spinner-shadow: none;
+  
+  --swap-btn-hover-bg: rgba(122, 162, 247, 0.08);
+  --swap-btn-hover-color: var(--glass-focus-border);
+  --swap-btn-hover-border: var(--glass-focus-border);
+  
+  --upload-ring-hover-bg: rgba(122, 162, 247, 0.08);
+  --upload-ring-hover-border: var(--glass-focus-border);
+  --upload-ring-hover-shadow: none;
+  --upload-icon-hover-color: var(--glass-focus-border);
+  
+  --file-card-border: var(--glass-border);
+  --file-card-hover-border: var(--glass-focus-border);
+  --file-card-hover-shadow: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 1. Animated Background Glows */
+.bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: -1;
+  opacity: 0.12;
+  animation: drift 20s infinite ease-in-out alternate;
+  display: var(--bg-glow-display);
+}
+.spot-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-cyan);
+  top: -5%;
+  left: 5%;
+}
+.spot-2 {
+  width: 500px;
+  height: 500px;
+  background: var(--accent-purple);
+  bottom: -5%;
+  right: 5%;
+  animation-delay: -5s;
+}
+.spot-3 {
+  width: 300px;
+  height: 300px;
+  background: var(--accent-magenta);
+  top: 40%;
+  left: 45%;
+  animation-delay: -10s;
+}
+
+@keyframes drift {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -50px) scale(1.1); }
+  100% { transform: translate(-30px, 40px) scale(0.9); }
+}
+
+/* Icons & Material Design 3 Symbols */
+.icon, .material-symbols-outlined {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 1;
+  user-select: none;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+}
+.mini-icon, .material-symbols-outlined.mini-icon {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 16;
+}
+.btn-icon, .material-symbols-outlined.btn-icon {
+  margin-right: 8px;
+}
+
+/* 2. Main Window Container */
+.window-container {
+  width: 92vw;
+  height: 88vh;
+  max-width: 1250px;
+  max-height: 850px;
+  min-height: 580px;
+  background: var(--panel-bg);
+  backdrop-filter: var(--panel-blur);
+  border: 1.5px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-panel);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* 3. App Header styling */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  border-bottom: 1.5px solid var(--glass-border);
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+/* Responsive Grid layout for header on smaller screens */
+@media (max-width: 1150px) {
+  .app-header {
+    display: grid;
+    grid-template-areas: 
+      "left settings"
+      "actions actions";
+    grid-template-columns: 1fr auto;
+    gap: 16px 20px;
+    padding: 14px 24px;
+  }
+  
+  .header-left {
+    grid-area: left;
+  }
+  
+  #settings-btn {
+    grid-area: settings;
+    justify-self: end;
+    margin-left: auto;
+  }
+  
+  .header-actions {
+    grid-area: actions;
+    justify-self: start;
+    width: 100%;
+  }
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-symbol {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-neon-cyan);
+}
+.logo-svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+.logo-text h1 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logo-text span {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 5px;
+  display: block;
+  margin-top: 1px;
+}
+
+/* Navigation Tabs Capsule */
+.navigation-tabs {
+  display: flex;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1.5px solid var(--glass-border);
+  padding: 4px;
+  border-radius: 30px;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 8px 18px;
+  border-radius: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-speed) ease;
+}
+.tab-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.03);
+}
+.tab-btn.active {
+  background: var(--gradient-btn);
+  color: #07070b;
+  font-weight: 600;
+  box-shadow: var(--shadow-neon-cyan);
+}
+.tab-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* Header Actions Controls */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-selector-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lang-pill {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--glass-border);
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 24px;
+  padding: 2px 12px;
+  transition: all var(--transition-speed);
+}
+.lang-pill:focus-within {
+  border-color: var(--glass-focus-border);
+  box-shadow: var(--focus-shadow-glow);
+}
+.dropdown {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--text-main);
+  padding: 6px 0;
+  cursor: pointer;
+  outline: none;
+}
+.dropdown option {
+  background-color: var(--modal-bg);
+  color: var(--text-main);
+}
+.dropdown.country-select {
+  font-weight: 600;
+  max-width: 90px;
+}
+.dropdown.lang-select {
+  border-left: 1.5px solid var(--glass-border);
+  padding-left: 10px;
+  margin-left: 6px;
+}
+
+.swap-circle-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid var(--glass-border);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-speed);
+}
+.swap-circle-btn:hover {
+  background: var(--swap-btn-hover-bg);
+  color: var(--swap-btn-hover-color);
+  border-color: var(--swap-btn-hover-border);
+  transform: rotate(180deg);
+}
+
+.glow-action-btn {
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 13px;
+  color: #07070b;
+  background: var(--gradient-primary);
+  border-radius: 24px;
+  padding: 8px 20px;
+  cursor: pointer;
+  box-shadow: var(--shadow-neon-cyan);
+  transition: all var(--transition-speed);
+}
+.glow-action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--action-btn-hover-shadow);
+}
+
+.glass-gear-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid var(--glass-border);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  padding: 0;
+  margin: 0;
+  outline: none;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+.glass-gear-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+  border-color: var(--text-muted);
+}
+
+/* 4. Workspace Area Layout */
+.workspace-area {
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.tab-pane {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.tab-pane.active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Text translation split cards */
+.premium-split-view {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+}
+.glass-card {
+  flex: 1;
+  background: var(--glass-bg);
+  border: 1.5px solid var(--glass-border);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-speed) ease;
+  overflow: hidden;
+}
+.glass-card:hover {
+  border-color: var(--glass-card-hover-border);
+  background: rgba(255, 255, 255, 0.08);
+}
+.glass-card:focus-within {
+  border-color: var(--glass-focus-border);
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: var(--glass-card-focus-shadow);
+}
+
+/* Source Input Card - Highly recognizable active input area */
+.glass-card.src-card {
+  border: 1.5px solid var(--src-card-border-color);
+  background: var(--src-card-bg);
+}
+.glass-card.src-card:hover {
+  border-color: var(--src-card-hover-border);
+  background: var(--src-card-hover-bg);
+  box-shadow: var(--src-card-hover-shadow);
+}
+.glass-card.src-card:focus-within {
+  border-color: var(--glass-focus-border);
+  background: var(--src-card-focus-bg);
+  box-shadow: var(--src-card-focus-shadow);
+}
+
+/* Target Output Card - Distinct read-only indicator */
+.glass-card.tg-card {
+  border: 1.5px solid var(--tg-card-border-color);
+  background: var(--tg-card-bg);
+}
+.glass-card.tg-card:hover {
+  border-color: var(--glass-border);
+  background: var(--tg-card-bg);
+}
+.glass-card.tg-card:focus-within {
+  border-color: var(--glass-border);
+  box-shadow: none;
+}
+
+.card-header {
+  padding: 14px 20px;
+  border-bottom: 1.5px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+}
+.card-title-pill {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.glass-card:hover .card-title-pill {
+  color: var(--accent-cyan);
+}
+
+.glass-card textarea {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  resize: none;
+  outline: none;
+  padding: 24px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-main);
+  caret-color: var(--accent-cyan);
+}
+.glass-card textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.card-footer {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-top: 1.5px solid var(--glass-border);
+  background: rgba(0, 0, 0, 0.15);
+}
+.char-counter {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.card-action-btn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-speed);
+}
+.card-action-btn:hover {
+  color: var(--text-main);
+}
+.card-action-btn.danger-hover:hover {
+  color: var(--accent-magenta);
+}
+.card-action-btn.accent-hover:hover {
+  color: var(--accent-cyan);
+}
+
+.left-actions {
+  display: flex;
+  gap: 16px;
+}
+
+/* Loading overlay inside Translation Output Card */
+.textarea-wrapper {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.translation-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(7, 7, 11, 0.85);
+  backdrop-filter: blur(8px);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.translation-loader p {
+  margin-top: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+.glowing-spinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--spinner-border);
+  border-top-color: var(--accent-cyan);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  box-shadow: var(--spinner-shadow);
+}
+
+/* 5. Document Translation View */
+.file-workspace {
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.dropzone-outer {
+  background: var(--dropzone-outer-bg);
+  padding: 1.5px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 620px;
+  margin-bottom: 24px;
+}
+.dropzone {
+  border: 1.5px solid var(--dropzone-border-color);
+  border-radius: 15px;
+  padding: 50px 30px;
+  text-align: center;
+  background: var(--dropzone-bg);
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+.dropzone:hover, .dropzone.dragover {
+  border-color: var(--dropzone-hover-border);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: var(--dropzone-hover-shadow);
+}
+
+.glow-upload-ring {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid var(--glass-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all var(--transition-speed);
+}
+.dropzone:hover .glow-upload-ring {
+  background: var(--upload-ring-hover-bg);
+  border-color: var(--upload-ring-hover-border);
+  box-shadow: var(--upload-ring-hover-shadow);
+}
+.upload-icon {
+  width: 28px;
+  height: 28px;
+  font-size: 28px;
+  color: var(--text-muted);
+  transition: color var(--transition-speed);
+}
+.dropzone:hover .upload-icon {
+  color: var(--upload-icon-hover-color);
+}
+
+.dropzone h3 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.dropzone p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+.file-spec-hint {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.18);
+  letter-spacing: 0.5px;
+}
+
+.file-status-glass-card {
+  background: var(--glass-bg);
+  border: 1.5px solid var(--file-card-border);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 620px;
+  padding: 24px;
+  box-shadow: var(--shadow-panel);
+  transition: all var(--transition-speed) ease;
+}
+.file-status-glass-card:hover {
+  border-color: var(--file-card-hover-border);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: var(--file-card-hover-shadow);
+}
+.file-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.file-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--file-icon-bg);
+  border: 1.5px solid var(--file-icon-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14px;
+}
+.file-icon {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  color: var(--file-icon-color);
+}
+.file-info-text {
+  flex-grow: 1;
+}
+.file-name {
+  font-size: 15px;
+  font-weight: 600;
+  word-break: break-all;
+}
+.file-size {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.close-card-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  transition: color var(--transition-speed);
+}
+.close-card-btn:hover {
+  color: var(--text-main);
+}
+
+.file-action-trigger {
+  margin-bottom: 20px;
+}
+.premium-button {
+  width: 100%;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  color: #07070b;
+  background: var(--gradient-primary);
+  border-radius: 12px;
+  padding: 14px;
+  cursor: pointer;
+  box-shadow: var(--shadow-neon-cyan);
+  transition: all var(--transition-speed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.premium-button:hover {
+  box-shadow: var(--btn-hover-shadow);
+}
+.premium-button.success-variant {
+  background: var(--gradient-success);
+  box-shadow: var(--success-shadow);
+}
+.premium-button.success-variant:hover {
+  box-shadow: var(--success-hover-shadow);
+}
+
+/* File scanning laser track progress bar */
+.glowing-progress-container {
+  margin-top: 20px;
+}
+.progress-info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.glow-progress-track {
+  background: rgba(255, 255, 255, 0.05);
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.glow-progress-fill {
+  background: var(--gradient-primary);
+  height: 100%;
+  width: 0%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+  position: relative;
+}
+.laser-light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.6) 50%, transparent 100%);
+  animation: scan 1.5s infinite;
+}
+@keyframes scan {
+  from { transform: translateX(-80px); }
+  to { transform: translateX(620px); }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInBubble {
+  from { opacity: 0; transform: translateY(8px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.file-result-container {
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+.glow-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%);
+  margin: 20px 0;
+}
+.file-result-container h4 {
+  color: var(--accent-green);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.stats-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+/* 6. Dialogue Chat View Terminal */
+.chat-workspace {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 24px;
+  overflow: hidden;
+}
+.chat-history {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+/* Chat Row styles */
+.chat-msg-row {
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
+  animation: fadeInBubble 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.chat-msg-row.bot {
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 14px;
+}
+.chat-msg-row.user {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  color: #07070b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 15px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-neon-cyan);
+  user-select: none;
+}
+
+.msg-bubble {
+  max-width: 72%;
+  padding: 14px 18px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  position: relative;
+}
+
+.chat-msg-row.bot .msg-bubble {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid var(--glass-border);
+  color: var(--text-main);
+  border-top-left-radius: 2px;
+}
+
+.chat-msg-row.user .msg-bubble {
+  background: var(--user-msg-bg);
+  color: #ffffff;
+  border-top-right-radius: 2px;
+  box-shadow: var(--shadow-neon-purple);
+}
+
+.pre-formatted {
+  white-space: pre-wrap;
+  font-family: var(--font-sans);
+}
+
+.msg-trans {
+  font-weight: 500;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+  padding-top: 8px;
+  margin-top: 8px;
+  color: var(--text-muted);
+}
+.chat-msg-row.user .msg-trans {
+  border-top-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.msg-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  justify-content: flex-end;
+}
+.msg-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-speed);
+}
+.msg-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--accent-cyan);
+}
+.chat-msg-row.user .msg-btn {
+  color: rgba(255, 255, 255, 0.7);
+}
+.chat-msg-row.user .msg-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+/* Chat bottom input wrapper matching ref-chat.png */
+.chat-input-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 20px 28px;
+  background: rgba(0, 0, 0, 0.15);
+  border-top: 1.5px solid var(--glass-border);
+  gap: 20px;
+}
+
+.chat-input-bar {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--chat-input-border-color);
+  border-radius: 12px;
+  padding: 4px 20px;
+  background: var(--chat-input-bg);
+  flex-grow: 1;
+  transition: all var(--transition-speed) ease;
+}
+.chat-input-bar:hover {
+  border-color: var(--chat-input-hover-border);
+  background: var(--chat-input-bg);
+  box-shadow: var(--chat-input-hover-shadow);
+}
+.chat-input-bar:focus-within {
+  border-color: var(--glass-focus-border);
+  background: var(--chat-input-bg);
+  box-shadow: var(--chat-input-focus-shadow);
+}
+.chat-input-bar input {
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px 0;
+  outline: none;
+  color: var(--text-main);
+}
+.chat-input-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+.chat-input-bar button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
+  transition: color var(--transition-speed);
+}
+.chat-input-bar button:hover {
+  color: var(--accent-cyan);
+}
+
+.chat-clear-btn {
+  border: none;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1.5px solid var(--glass-border);
+  cursor: pointer;
+  color: var(--text-muted);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all var(--transition-speed);
+}
+.chat-clear-btn:hover {
+  background: rgba(255, 59, 48, 0.08);
+  color: var(--accent-magenta);
+  border-color: rgba(255, 59, 48, 0.25);
+  box-shadow: var(--clear-btn-hover-shadow);
+}
+
+/* Header hide class */
+.chat-mode-active .lang-selector-group,
+.chat-mode-active #translate-btn {
+  display: none !important;
+}
+
+/* 7. Footer Status bar */
+.app-status-bar {
+  background: rgba(0, 0, 0, 0.25);
+  border-top: 1.5px solid var(--glass-border);
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  font-size: 11.5px;
+  color: var(--text-muted);
+  user-select: none;
+}
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.status-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+.status-pulse-dot.green {
+  background: var(--accent-green);
+  box-shadow: 0 0 8px var(--accent-green);
+}
+.status-pulse-dot.red {
+  background: var(--accent-magenta);
+  box-shadow: 0 0 8px var(--accent-magenta);
+}
+.status-pulse-dot.yellow {
+  background: #ffbd2e;
+  box-shadow: 0 0 8px #ffbd2e;
+}
+
+.bar-divider {
+  color: rgba(255, 255, 255, 0.08);
+}
+
+.status-refresh-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all var(--transition-speed);
+}
+.status-refresh-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* 8. Settings modal center */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(5, 5, 8, 0.5);
+  backdrop-filter: blur(20px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.settings-glass-card {
+  background: var(--modal-bg);
+  border: 1.5px solid var(--glass-border);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 490px;
+  box-shadow: var(--shadow-panel);
+  display: flex;
+  flex-direction: column;
+  transform: translateY(30px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+.modal-overlay.active .settings-glass-card {
+  transform: translateY(0);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-bottom: 1.5px solid var(--glass-border);
+}
+
+.modal-header h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin: 0;
+  font-size: 18px;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  transition: color var(--transition-speed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-close:hover {
+  color: var(--text-main);
+}
+
+.modal-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.settings-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.settings-group label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+.settings-group input[type="text"], .settings-group select {
+  font-family: inherit;
+  font-size: 13.5px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1.5px solid var(--glass-border);
+  background: rgba(0, 0, 0, 0.2);
+  outline: none;
+  width: 100%;
+  color: var(--text-main);
+  transition: all var(--transition-speed);
+}
+.settings-group input[type="text"]:focus, .settings-group select:focus {
+  border-color: var(--glass-focus-border);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.flex-input-row {
+  display: flex;
+  gap: 10px;
+}
+.flex-input-row select {
+  flex-grow: 1;
+}
+
+.pill-border-btn {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1.5px solid var(--glass-border);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 0 18px;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+.pill-border-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.checkbox-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.checkbox-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--accent-cyan);
+}
+.checkbox-row label {
+  cursor: pointer;
+  user-select: none;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text-main);
+}
+
+.label-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.label-info-row span {
+  font-size: 12px;
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+/* Custom Styled Range Slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.06);
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  cursor: pointer;
+  box-shadow: var(--shadow-neon-cyan);
+  transition: transform 0.1s;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.modal-footer {
+  padding: 18px 24px;
+  border-top: 1.5px solid var(--glass-border);
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.2);
+}
+.premium-button.save-action {
+  width: auto;
+  padding: 10px 24px;
+  border-radius: 8px;
+}
+
+/* Custom Neon Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--glass-focus-border);
+}
